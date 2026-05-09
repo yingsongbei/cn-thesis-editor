@@ -93,8 +93,9 @@ Restriction enzyme rules:
 
 Latin expression rules:
 
-- Do not automatically italicize common Latin scientific expressions such as in vivo, in vitro, in situ, ex vivo, in silico, et al., de novo, and ad hoc.
-- If the school template requires these expressions to be italicized, apply that rule consistently and state it in risk notes.
+- Italicize common experimental/context Latin expressions where formatting is available: *in vivo*, *in vitro*, *in situ*, *ex vivo*, *in silico*, and *de novo*.
+- Keep et al. non-italic by default.
+- If the school template requires a different rule for Latin expressions, apply that rule consistently and state it in risk notes.
 
 When returning edits involving formatting, include a brief "Formatting notes" item in risk notes listing which mode was used and which uncertain cases need author confirmation.
 

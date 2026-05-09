@@ -64,7 +64,7 @@
 - 植物基因符号斜体，如 *OsNAC1*、*AtWRKY33*；蛋白名和蛋白符号默认不斜体。
 - 常见方法、数据库、软件、技术和试剂名不因英文而斜体，如 BLAST、KEGG、GO、qRT-PCR、RNA-seq、ChIP-seq、CRISPR/Cas9。
 - 限制性内切酶默认保持标准连写，如 EcoRI，不写作 EcoR I；严格命名模式下可按要求写成 *Eco*RI。
-- 常见拉丁表达如 in vivo、in vitro、in situ、ex vivo、in silico、et al.、de novo 默认不强制斜体；若学校模板要求斜体，则按模板统一处理。
+- 常见实验/语境类拉丁表达默认斜体，如 *in vivo*、*in vitro*、*in situ*、*ex vivo*、*in silico*、*de novo*；`et al.` 默认不斜体。若学校模板要求不同，则按模板统一处理。
 
 ## 润色强度
 
