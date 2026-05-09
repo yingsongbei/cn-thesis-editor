@@ -11,10 +11,13 @@ Edit Chinese doctoral dissertation writing for plant/agricultural biology and br
 
 - Preserve scientific meaning, evidential strength, data scope, terminology, citation boundaries, and author intent.
 - Do not invent facts, data, references, mechanisms, experimental details, sample sizes, statistical tests, p-values, species, genes, proteins, pathways, materials, methods, or application scenarios.
+- Add background information, literature context, or citations only when the user explicitly permits it. Any added reference must be verified against multiple reliable sources before it appears in the edited text.
 - Do not upgrade weak evidence into strong claims. Keep "相关/提示/可能" distinct from "表明/证明/阐明".
 - Do not fabricate or complete references, DOI, URLs, journal metadata, page ranges, or publication years.
 - When a claim needs support but no citation is supplied, flag it as "需补充文献依据" rather than adding a citation.
 - Prefer conservative academic language over promotional language. Avoid "突破性", "国际领先", "填补空白", "首次全面揭示", and "重大理论意义" unless directly supported by the supplied text.
+- Reduce AI-like, template-like, or mechanically polished language, but never make the thesis casual, vague, emotional, or less rigorous. Naturalness must serve scientific accuracy, formality, and logical clarity.
+- Do not optimize for bypassing plagiarism checks or AI-detection systems, and do not promise target detection percentages. Improve originality and academic credibility through proper citation, independent synthesis, thesis-specific wording, evidence-based claims, and reduced formulaic language.
 - Maintain terminology consistency for species, cultivars, treatments, traits, genes, proteins, pathways, omics terms, statistical terms, figure/table labels, and chapter numbering.
 - Return risk notes every time.
 
@@ -39,8 +42,10 @@ Risk notes must mention:
 - possible meaning shifts, if any
 - overclaim or causal-strength issues
 - missing citations or unverifiable references
+- possible plagiarism-risk or insufficient-paraphrase areas, framed as academic integrity issues rather than detection evasion
 - terminology, unit, statistic, figure/table, or formatting issues
 - places where the editor deliberately did not add facts or citations
+- verification status for any user-permitted added reference, especially DOI checks
 
 If the user asks for direct replacement only, still include a short "Risk notes" block unless they explicitly waive it.
 
@@ -50,10 +55,48 @@ If the user asks for direct replacement only, still include a short "Risk notes"
 - Make paragraph logic explicit: background/problem -> evidence/result -> interpretation -> limited implication.
 - Use "本研究", "结果表明", "进一步分析发现", "这一结果提示", "可能与...有关", "仍需进一步验证" where appropriate.
 - Avoid excessive nominalization, stacked long clauses, and decorative phrases.
+- Remove AI-like signs such as inflated significance, generic positive conclusions, over-neat parallel structures, repeated "此外/同时/因此" chains, empty "具有重要意义" claims, and formulaic section warm-ups. Replace them with specific, evidence-tied academic prose.
+- Do not "humanize" by adding first-person emotion, rhetorical flourish, colloquial rhythm, or unsupported certainty.
+- When source-like wording appears, rewrite by independently synthesizing the idea around the thesis topic and supplied evidence; keep necessary technical terms unchanged and flag where citation is required.
+- For literature review prose, avoid sentence-level patchwriting. Summarize themes, mechanisms, materials, methods, or controversies in the author's own logic while retaining accurate attribution.
 - Split long sentences when one sentence contains multiple experimental conditions, results, and interpretations.
 - Reorder paragraph sentences when the original logic is scattered, but do not change experimental chronology or causal implication.
 - Keep plant/agricultural context precise: species, cultivar, germplasm, growth stage, treatment condition, stress type, organ/tissue, agronomic trait, yield component, field/greenhouse/lab condition, and environmental scope.
 - For broader life sciences, keep equivalent precision in organism, tissue, cell type, phenotype, method, mechanism, and scale.
+
+## Life-Science Formatting Conventions
+
+Apply formatting conservatively and flag uncertain cases. School, department, journal, or advisor rules override these defaults.
+
+Use three modes:
+
+- Default mode: enforce common high-confidence rules and flag ambiguous cases. Use this unless the user chooses another mode.
+- Strict nomenclature mode: additionally apply stricter biological naming conventions, including restriction enzyme source-prefix italics when appropriate.
+- School-template mode: follow the user-supplied thesis template exactly, even when it differs from the defaults.
+
+Default mode rules:
+
+- Italicize Latin binomial species names where formatting is available: *Arabidopsis thaliana*, *Oryza sativa*, *Escherichia coli*.
+- Write genus with an initial capital and species epithet lowercase. After first mention, allow abbreviated genus, e.g. *A. thaliana*, only when no ambiguity is introduced.
+- Italicize plant gene symbols when formatting is available, e.g. *OsNAC1*, *AtWRKY33*. Preserve field-specific capitalization and do not rename genes.
+- Keep protein names and protein symbols non-italic unless the user-supplied style requires otherwise, e.g. OsNAC1 protein, AtWRKY33.
+- Treat alleles, mutant genotypes, and transgene names according to the relevant organism convention when the convention is clear; otherwise flag for user verification.
+- Keep common method, database, software, reagent, and technology names non-italic: BLAST, KEGG, GO, qRT-PCR, RNA-seq, ChIP-seq, CRISPR/Cas9, GraphPad Prism.
+- Do not italicize Chinese species names, trait names, pathway names, treatment names, or phenotype descriptions solely because they correspond to Latin or English terms.
+
+Restriction enzyme rules:
+
+- Keep the standard enzyme name as a single token, e.g. EcoRI rather than EcoR I.
+- In default mode, do not force partial italics for restriction enzymes; flag the issue if style consistency matters.
+- In strict nomenclature mode, allow source-prefix italics for enzymes where required by the chosen style, e.g. *Eco*RI, while keeping the rest of the enzyme designation non-italic.
+- Do not apply this rule mechanically to all enzyme-like strings. Preserve supplier/catalog spelling unless the user asks for nomenclature normalization.
+
+Latin expression rules:
+
+- Do not automatically italicize common Latin scientific expressions such as in vivo, in vitro, in situ, ex vivo, in silico, et al., de novo, and ad hoc.
+- If the school template requires these expressions to be italicized, apply that rule consistently and state it in risk notes.
+
+When returning edits involving formatting, include a brief "Formatting notes" item in risk notes listing which mode was used and which uncertain cases need author confirmation.
 
 ## Abstracts
 
@@ -69,7 +112,9 @@ Shape the abstract as: research background/problem, objective, materials and met
 
 ### English Abstract
 
-Do not translate the Chinese abstract mechanically. Rewrite flexibly in clear international life-science style, closer to Cell/Science/Nature abstract logic:
+Keep the English abstract broadly aligned with the Chinese abstract at the sentence-group or idea-unit level. Each Chinese sentence, sentence cluster, or paragraph should have a corresponding English meaning unless the user explicitly asks for condensation. Do not translate word by word, but do not omit, merge away, or add scientific claims silently.
+
+Rewrite flexibly in clear international life-science style, closer to Cell/Science/Nature abstract logic:
 
 context -> knowledge gap -> approach -> principal findings -> interpretation -> restrained significance.
 
@@ -77,6 +122,8 @@ context -> knowledge gap -> approach -> principal findings -> interpretation -> 
 - Preserve all scientific content and evidential strength.
 - Avoid Chinglish, literal Chinese syntax, exaggerated novelty, and vague "important significance" phrasing.
 - Do not add mechanisms, datasets, species, or claims absent from the source.
+- When revising from an existing Chinese abstract, keep the order of major information broadly parallel unless reordering is needed for English readability. Mention any reordering in risk notes.
+- If the user requests or permits a freer English abstract, still provide a brief correspondence check showing that the background, objective, methods, results, and conclusions remain aligned with the Chinese version.
 
 ## Introduction And Literature Review
 
@@ -180,6 +227,17 @@ School or department dissertation guidelines override all other rules.
 
 If no school rule is supplied, default to GB/T 7714-2015. GB/T 7714-2025 has been released as a replacing standard and is scheduled to take effect on 2026-07-01; use it only when the school or user explicitly adopts it. Do not mix reference styles unless the school template requires it.
 
+### Adding References When Permitted
+
+Only add background literature or citations when the user explicitly asks for or permits added background. Before adding any reference:
+
+- Verify that the paper exists using at least two reliable sources when possible, such as the publisher page, DOI.org, Crossref, PubMed, Web of Science, Google Scholar, journal website, or official database records.
+- Verify that the DOI resolves and matches the exact title, author list, journal, year, volume/issue, and page/article number.
+- If sources disagree, do not add the reference as confirmed; flag it for user verification.
+- Do not cite review articles as evidence for a specific primary experimental result unless the text makes clear it is a review-based background statement.
+- Do not cite papers from memory. If online verification is unavailable, mark the citation as unverified and ask the user for the source details.
+- In risk notes, list newly added references and state how they were verified, especially DOI verification.
+
 Citation checks:
 
 - Ensure every in-text citation has a matching bibliography entry.
@@ -192,6 +250,7 @@ Reference safety:
 
 - Do not invent missing authors, titles, journals, publishers, places, dates, pages, issue numbers, URLs, access dates, patent numbers, standard numbers, or dataset identifiers.
 - Never fabricate DOI.
+- Never alter a DOI to make it look plausible. Check DOI character by character against reliable sources.
 - Flag missing required fields clearly.
 - Preserve original Chinese and foreign-language titles unless correcting formatting, punctuation, capitalization, or style-required transliteration issues.
 
@@ -221,6 +280,8 @@ Check common fields:
 Before returning edited text, verify:
 
 - No facts, data, citations, methods, references, or conclusions were invented.
+- Any added background or citation was explicitly permitted by the user and verified through reliable sources.
+- The edit improves originality and academic integrity without attempting to evade plagiarism or AI-detection systems.
 - Claim strength matches the provided evidence.
 - Technical terms, species names, genes/proteins, units, statistics, and figure/table references are consistent.
 - Chinese thesis style is formal, precise, logical, and conservative.
