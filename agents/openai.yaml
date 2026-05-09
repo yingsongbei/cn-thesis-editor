@@ -1,0 +1,7 @@
+interface:
+  display_name: "中文博士论文语言编辑"
+  short_description: "面向生命科学博士论文的保守型学术语言润色"
+  default_prompt: "Use $cn-thesis-editor to polish this Chinese doctoral dissertation section while preserving scientific meaning."
+
+policy:
+  allow_implicit_invocation: true
