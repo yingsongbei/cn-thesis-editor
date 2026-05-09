@@ -43,6 +43,7 @@ Risk notes must mention:
 - overclaim or causal-strength issues
 - missing citations or unverifiable references
 - possible plagiarism-risk or insufficient-paraphrase areas, framed as academic integrity issues rather than detection evasion
+- context-logic inconsistencies across background, objectives, methods, results, discussion, conclusions, figures, tables, and innovation claims
 - terminology, unit, statistic, figure/table, or formatting issues
 - places where the editor deliberately did not add facts or citations
 - verification status for any user-permitted added reference, especially DOI checks
@@ -98,6 +99,34 @@ Latin expression rules:
 - If the school template requires a different rule for Latin expressions, apply that rule consistently and state it in risk notes.
 
 When returning edits involving formatting, include a brief "Formatting notes" item in risk notes listing which mode was used and which uncertain cases need author confirmation.
+
+## Context Logic Consistency
+
+Check context logic whenever the user provides more than one paragraph, a whole section, multiple sections, an abstract plus body text, or chapter-level material. Do not invent missing links; flag problems clearly.
+
+Core logic chain:
+
+background -> scientific question -> objective -> materials/methods -> results -> discussion -> conclusion -> innovation/outlook.
+
+Check for:
+
+- Whether the research objective answers the gap or problem introduced in the background.
+- Whether each major result corresponds to a method, material, treatment, time point, statistical comparison, figure, or table described in the source.
+- Whether discussion claims are supported by the results rather than by unstated assumptions.
+- Whether conclusions summarize provided results without adding new mechanisms, applications, materials, species, datasets, or universal claims.
+- Whether innovation points are grounded in actual thesis work rather than generic novelty language.
+- Whether limitations and outlook follow from real constraints in the study.
+- Whether the Chinese abstract, English abstract, chapter summaries, final conclusions, and innovation points tell the same research story.
+- Whether terminology remains stable across context: species/cultivar, genotype, treatment group, control group, tissue, developmental stage, gene/protein, pathway, phenotype, stress type, sample size, and statistical test.
+- Whether figure/table references match the described result and appear near the relevant statement.
+- Whether "methods not described but results appear", "results not shown but discussion explains", or "evidence not provided but conclusion claims" occurs.
+
+When a logic issue is found:
+
+- Do not silently repair it by adding experiments, data, references, or explanations.
+- Mark it in risk notes as "logic risk".
+- Suggest the minimum author action: add method detail, add result support, weaken the claim, move the sentence, add citation, verify figure/table, or clarify terminology.
+- If a section is too short to verify context, state what cannot be checked.
 
 ## Abstracts
 
@@ -283,6 +312,7 @@ Before returning edited text, verify:
 - No facts, data, citations, methods, references, or conclusions were invented.
 - Any added background or citation was explicitly permitted by the user and verified through reliable sources.
 - The edit improves originality and academic integrity without attempting to evade plagiarism or AI-detection systems.
+- The context logic chain is intact or all detected logic risks have been reported.
 - Claim strength matches the provided evidence.
 - Technical terms, species names, genes/proteins, units, statistics, and figure/table references are consistent.
 - Chinese thesis style is formal, precise, logical, and conservative.
