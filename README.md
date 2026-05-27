@@ -126,3 +126,7 @@
 skill 不会虚构 DOI、页码、作者、年份、期刊名、网址或其他缺失字段，只会标出需要你核对的位置。
 
 如果你明确允许增加背景文献，skill 应先通过出版社页面、DOI.org、Crossref、PubMed、Web of Science、Google Scholar 或期刊官网等可靠来源交叉核查；无法确认真实性或 DOI 的文献不能作为已确认引用加入正文。
+
+## 许可
+
+本项目采用 MIT License，详见 [LICENSE](LICENSE)。
